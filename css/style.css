@@ -1,0 +1,402 @@
+/* ---------- 1. ESTILOS GENERALES Y JERARQUÍA UNIFICADA ---------- */
+
+html {
+    scroll-padding-top: 4.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #202020;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+strong {
+    color: #111111;
+}
+
+em {
+    color: #444444;
+}
+
+/* Regla forzada para que 01/, 02/, 03/, 04/ y 05/ tengan exactamente el mismo tamaño */
+.subtitulo,
+.seccion .subtitulo,
+.beneficios .subtitulo,
+.evolucion .subtitulo,
+.mas-informacion .subtitulo {
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    color: #777777;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+}
+
+/* Todos los títulos de sección unificados a 2.5rem */
+.texto h1,
+.texto h2,
+.beneficios h2,
+.evolucion h2,
+.mas-informacion h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #111111;
+}
+
+
+/* ---------- 2. CABECERA Y MENÚ ---------- */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 10% 0.5rem;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #111111;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1.2rem 10%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- 3. SECCIONES A DOS COLUMNAS (01 y 02) ---------- */
+
+.seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 5rem 10%;
+    border-top: 1px solid #eeeeee;
+}
+
+.principal {
+    border-top: none;
+    padding-top: 4rem;
+}
+
+.invertida {
+    flex-direction: row-reverse;
+}
+
+.texto {
+    width: 52%;
+}
+
+.texto p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #555555;
+    margin-bottom: 1.2rem;
+}
+
+.foto-producto {
+    width: 42%;
+    max-width: 28rem;
+}
+
+.imagenes-interaccion {
+    width: 42%;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.definiciones {
+    margin: 1.5rem 0 0;
+}
+
+.definiciones dt {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #202020;
+    margin-top: 1.2rem;
+}
+
+.definiciones dd {
+    font-size: 1.05rem;
+    margin-left: 0;
+    margin-top: 0.3rem;
+    color: #555555;
+    line-height: 1.65;
+}
+
+.eleccion-dispositivo {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    border-top: 2px solid #202020;
+}
+
+.eleccion-dispositivo h3 {
+    font-size: 1.25rem;
+    color: #111111;
+    margin-bottom: 0.8rem;
+}
+
+.eleccion-dispositivo p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #555555;
+    margin-bottom: 0.8rem;
+}
+
+.eleccion-dispositivo p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- 4. BENEFICIOS (03) ---------- */
+
+.beneficios {
+    padding: 5rem 10%;
+    border-top: 1px solid #eeeeee;
+}
+
+.introduccion-seccion {
+    color: #555555;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.lista-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2.5rem 0 3.5rem;
+}
+
+.lista-beneficios article {
+    flex: 1 1 16rem;
+    box-sizing: border-box;
+    padding: 1.8rem 1.5rem;
+    border-top: 2px solid #202020;
+    background-color: #fafafa;
+}
+
+.lista-beneficios h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.lista-beneficios p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+.beneficios img {
+    width: 100%;
+    max-width: 62rem;
+    margin: 0 auto;
+}
+
+.nota-destacada {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    border-left: 4px solid #202020;
+}
+
+.nota-destacada p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #555555;
+    margin-bottom: 0;
+}
+
+/* ---------- 5. EVOLUCIÓN (04) ---------- */
+
+.evolucion {
+    padding: 5rem 10%;
+    border-top: 1px solid #eeeeee;
+}
+
+.lista-evolucion {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2.5rem 0 0;
+}
+
+.lista-evolucion li {
+    flex: 1 1 16rem;
+    box-sizing: border-box;
+    padding: 1.8rem 1.5rem;
+    border-top: 2px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-evolucion .numero {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #777777;
+    margin-bottom: 0.5rem;
+}
+
+.lista-evolucion h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.lista-evolucion p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+}
+
+.lista-evolucion img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: auto;
+}
+
+/* ---------- 6. MÁS INFORMACIÓN (05) Y PIE ---------- */
+
+.mas-informacion {
+    padding: 5rem 10%;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eeeeee;
+}
+
+.mas-informacion p {
+    font-size: 1.05rem;
+    margin: 0 auto 2rem;
+    color: #555555;
+}
+
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #202020;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.9rem 1.8rem;
+    border: 2px solid #202020;
+}
+
+.boton:hover {
+    background-color: #555555;
+}
+
+.boton-claro {
+    background-color: #ffffff;
+    color: #202020;
+}
+
+.boton-claro:hover {
+    background-color: #e5e5e5;
+}
+
+footer {
+    background-color: #202020;
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+    color: #cccccc;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+.mas-informacion .nota-fuentes {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.arriba {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    padding: 0.5rem 0.9rem;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+}
+
+.arriba:hover {
+    background-color: #555555;
+}
